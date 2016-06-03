@@ -43,9 +43,13 @@ router.post('/',function(request,response)
         }
       });
 
+      response.redirect('index',function(err,content)
+    {
+      response.send(content);
+    })
 
       //response.sendFile(path.join(__dirname,'../views/'));
-        response.redirect('/');
+      //  response.redirect('/');
       console.log("Cookies" , request.cookies);
 
 });

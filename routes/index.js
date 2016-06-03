@@ -65,7 +65,7 @@ router.get('/getJSON',function(req,res)
 {
   console.log("inside get json");
   var content=fs.readFileSync('data/input.json');
-  res.json(content.toString());
+  res.json(JSON.parse(content.toString()));
 });
 
 

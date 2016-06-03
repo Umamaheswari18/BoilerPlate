@@ -53,7 +53,7 @@ html
                   h2.modal-title Insert Movie Details
                 // End Modal Header
                 .modal-body
-                  form.form-horizontal(method='post', action='add', name='addForm', onsubmit='validate2();')
+                  form.form-horizontal(method='post', action='curdOpt/add', name='addForm', onsubmit='return(validate2());')
                     .form-group
                       label.col-lg-2.control-label(for='#inputTitle') Title
                       .col-lg-10
@@ -123,7 +123,7 @@ html
                   h2.modal-title Update Movie Details
                 // End Modal Header
                 .modal-body
-                  form.form-horizontal(method='post', name='updForm', action='update', onsubmit='return(validate());')
+                  form.form-horizontal(method='post', name='updForm', action='curdOpt/update', onsubmit='return(validate());')
                     .form-group
                       label.col-lg-2.control-label(for='#updateTitle') Title
                       .col-lg-10

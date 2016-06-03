@@ -7,9 +7,11 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var create=require('./routes/create');
-var update=require('./routes/update');
-var deleteMovie=require('./routes/deletePage');
+var curdOpt=require('./routes/curdOpt');
+
+// var create=require('./routes/create');
+// var update=require('./routes/update');
+// var deleteMovie=require('./routes/deletePage');
 var fs=require('fs');
 var querystring=require('querystring');
 var app = express();
@@ -29,9 +31,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-app.use('/add',create);
-app.use('/update',update);
-app.use('/deletePage',deleteMovie)
+app.use('/curdOpt',curdOpt);
+// app.use('/add',create);
+// app.use('/update',update);
+// app.use('/deletePage',deleteMovie);
 
 
 // catch 404 and forward to error handler

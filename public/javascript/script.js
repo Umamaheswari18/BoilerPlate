@@ -43,7 +43,7 @@
           $.ajax(
             {
               method:'delete',
-              url:'deletePage/' + deleteTitle,
+              url:'curdOpt/deletePage/' + deleteTitle,
 
               success: function(result)
               {
